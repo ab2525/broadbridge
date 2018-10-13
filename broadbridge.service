@@ -1,0 +1,17 @@
+[Unit]
+Description=Broadlink Python Web API
+Requires=network-online.target
+After=network-online.target
+X-Snappy=yes
+
+[Service]
+ExecStart=/opt/broadbridge/run.sh
+SyslogIdentifier=broadbridge.daemon
+Restart=always
+#ExecStop=
+#ExecReload=
+TimeoutStopSec=600
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
