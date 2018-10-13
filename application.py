@@ -41,7 +41,7 @@ def sendcmd(cmd=None):
     if cmd == None:
         return "No command given. Try /sendcmd/&lt;command&gt;"
     elif cmd in commands:
-        device.send_data(commands[cmd])
+        device.send_data(commands[cmd.lower()])
         return "Sending "+cmd+" to "+devnet
     else:
         return "Command "+cmd+" is not an <a href='/cmdlist'>known</a> command."
@@ -53,7 +53,7 @@ def loopcmd(cmd=None,cnt=1):
         return "No command given. Try /loopcmd/&lt;command&gt;/&lt;count&gt;"
     elif cmd in commands:
         for _ in range(int(cnt)):
-            device.send_data(commands[cmd])
+            device.send_data(commands[cmd.lower()])
             sleep(0.2)
         return "Sending "+cmd+" "+cnt+" times to "+devnet
     else:
@@ -67,11 +67,11 @@ def sendscene(scene=None):
     if scene == None:
         return "No scene given. Try /sendscene/&lt;scene&gt;"
     elif scene in scenes:
-        for cmd in scenes[scene]:
+        for cmd in scenes[scene.lower()]:
             if cmd == None:
                 return "No command given. Try /sendcmd/&lt;command&gt;"
             elif cmd in commands:
-                device.send_data(commands[cmd])
+                device.send_data(commands[cmd.lower()])
             else:
                 return "Command "+cmd+" is not an <a href='/cmdlist'>known</a> command."
             sleep(0.5)
