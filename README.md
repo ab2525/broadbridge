@@ -10,10 +10,12 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Broadbridge relies on the following python modules. It is recommended to install them via `pip` or your distrobution's package manager.
 
 ```
-Give examples
+flask
+broadlink
+
 ```
 
 ### Installing
@@ -34,35 +36,17 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+As with all Flask apps, running the development server in production is not recommended - however, due to the low request volume and size these typically receive, it is probably not the end of the world.
+
+Regardless, a proper "production" deployment would be to use one of the standalone WSGI containers for Flask described [here](http://flask.pocoo.org/docs/1.0/deploying/wsgi-standalone/)
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Flask](http://flask.pocoo.org/docs/1.0/deploying/wsgi-standalone/) - Python web application framework
+* [python-broadlink](https://github.com/mjg59/python-broadlink) - Used for discovery and communication with broadlink devices
 
 
 ## Authors
