@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Broadbridge relies on the following python modules. It is recommended to install them via `pip` or your distrobution's package manager.
+Broadbridge relies on the following python modules. It is recommended to install them via `pip` or your distribution's package manager.
 
 ```
 flask
@@ -45,7 +45,7 @@ Regardless, a proper "production" deployment would be to use one of the standalo
 
 ## Built With
 
-* [Flask](http://flask.pocoo.org/docs/1.0/deploying/wsgi-standalone/) - Python web application framework
+* [Flask](http://flask.pocoo.org) - Python web application framework
 * [python-broadlink](https://github.com/mjg59/python-broadlink) - Used for discovery and communication with broadlink devices
 
 
