@@ -46,12 +46,12 @@ Finally, run the server with `run.sh`.
 
 You can hit the following URL endpoints:
 
-# `/cmdlist` - See all the commands known to the currently running instance
-# `/scenelist` - See all the scenes known to the currently running instance
-# `/devinfo` - See information about the discovered broadlink device.
-# `/sendcmd/<command>` - Send an IR or RF command by name, as defined in `commands.py`
-# `/sendscene/<scene>` - Send a scene by name, as defined in `scenes.py`
-# `/loopcmd/<command>/<count>` - Send an IR or RF command count times in a row
+- `/cmdlist` - See all the commands known to the currently running instance
+- `/scenelist` - See all the scenes known to the currently running instance
+- `/devinfo` - See information about the discovered broadlink device.
+- `/sendcmd/<command>` - Send an IR or RF command by name, as defined in `commands.py`
+- `/sendscene/<scene>` - Send a scene by name, as defined in `scenes.py`
+- `/loopcmd/<command>/<count>` - Send an IR or RF command count times in a row
 
 
 ## Deployment
