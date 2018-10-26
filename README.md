@@ -42,6 +42,8 @@ True
 
 Once you have your IR codes in `commands.py`, you can edit `scenes.py` to make chains of commands callable with one URL. (Switch TV input, turn off multiple lights, etc)
 
+You may want to change the listen port or IP, or the installation path. This can be done in `run.sh`. Note that if you install this anywhere other than `/opt`, the systemd service definition will need to be updated as well.
+
 Finally, run the server with `run.sh`.
 
 You can hit the following URL endpoints:
