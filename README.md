@@ -28,7 +28,7 @@ $ cp scenes.py.example scenes.py
 $ cp commands.py.example commands.py
 ```
 
-Gather your IR codes. The easiest way to do this is from the python shell. There is an example below. The result will be a command packet that you can copy and paste into the commands dictionary, following the formatting from the example ones.
+Gather your IR codes. The easiest way to do this is from the python shell. There is an example below. The result will be a command packet that you can copy and paste into the `commands.py` dictionary, following the formatting from the example ones.
 
 ```
 >>> import broadlink
