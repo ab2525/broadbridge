@@ -20,21 +20,29 @@ broadlink
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+Copy the example `scenes.py` and `commands.py` files to their normal place.
 
 ```
-until finished
+$ cp scenes.py.example scenes.py
+$ cp commands.py.example commands.py
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Gather your IR codes. The easiest way to do this is from the python shell. There is an example below. The result will be a command packet that you can copy and paste into the commands dictionary, following the formatting from the example ones.
+
+```
+>>> import broadlink
+>>> device = broadlink.discover(timeout=3)[0]
+>>> device.auth()
+True
+>>> device.enter_learning()
+>>> ;;; BEAM IR AT RECEIVER ;;;
+>>> device.check_data()
+```
+
+Once you have your IR codes in `commands.py`, you can edit `scenes.py` to make chains of commands callable with one URL. (Switch TV input, turn off multiple lights, etc)
+
+Finally, run the server with `run.sh`.
 
 
 ## Deployment
